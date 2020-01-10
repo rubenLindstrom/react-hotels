@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
+import logo from "../images/logo.png";
 
 import { FaAlignRight } from "react-icons/fa";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="Resorts logo" />
+            <img src={logo} alt="Resorts logo" className="logo" />
           </Link>
           <button type="button" className="nav-btn" onClick={handleToggle}>
             <FaAlignRight className="nav-icon" />
