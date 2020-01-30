@@ -2,14 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Components
-import { Hero, Banner } from "../components/atoms";
+import Slideshow from "../components/slideshow";
+import { Banner } from "../components/atoms";
 import Services from "../components/services";
 import FeaturedRooms from "../components/featuredRooms";
+
+const slideshowSettings = {
+  images: [
+    require("../images/home.jpg"),
+    require("../images/home3.jpg"),
+    require("../images/home1.jpeg")
+  ],
+  slideDuration: 6000
+};
 
 const home = () => {
   return (
     <>
-      <Hero>
+      <Slideshow {...slideshowSettings}>
         <Banner
           title="luxurious rooms"
           subTitle="deluxe rooms starting at $299"
@@ -18,7 +28,7 @@ const home = () => {
             our rooms
           </Link>
         </Banner>
-      </Hero>
+      </Slideshow>
       <Services />
       <FeaturedRooms />
     </>
