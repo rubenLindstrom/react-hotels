@@ -304,8 +304,9 @@ h6 {
   text-align: center;
   padding: 5rem 0;
 }
+
 .services-center {
-  width: 90vw;
+  width: 95vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
@@ -315,6 +316,7 @@ h6 {
 
 .service {
   width: 280px;
+  box-sizing: border-box;
   margin: auto;
   background-color: #f8f8f8;
   padding: 2rem;
@@ -348,7 +350,7 @@ h6 {
 @media screen and (min-width: 992px) {
   .services-center {
     width: 95vw;
-    max-width: 1170px;
+    max-width: 1250px;
   }
 }
 

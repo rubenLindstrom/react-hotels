@@ -13,7 +13,7 @@ const slideshowSettings = {
     require("../images/home2.jpg"),
     require("../images/home.jpg")
   ],
-  slideDuration: 5000
+  slideDuration: 4000
 };
 
 const home = () => {

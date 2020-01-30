@@ -35,14 +35,16 @@ const services = () => {
   return (
     <section className="services">
       <Title>services</Title>
-      <div className="services-center">
-        {services.map((item, index) => (
-          <article key={index} className="service">
-            <span>{item.icon}</span>
-            <h6>{item.title}</h6>
-            <p>{item.info}</p>
-          </article>
-        ))}
+      <div className="services-outer">
+        <div className="services-center">
+          {services.map((item, index) => (
+            <article key={index} className="service">
+              <span>{item.icon}</span>
+              <h6>{item.title}</h6>
+              <p>{item.info}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
