@@ -1,8 +1,7 @@
-// rafce
-
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // Pages
 import Home from "./pages/home";
@@ -26,20 +25,20 @@ import Navbar from "./components/navbar";
   -Add footer to rooms-pages
 */
 
-const app = () => {
+const App = props => {
+  useEffect(() => window.scrollTo(0, 0), [props.location.pathname]);
+
   return (
     <>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/rooms" component={Rooms} exact />
-          <Route path="/rooms/:slug" component={SingleRoom} exact />
-          <Route component={Error} />
-        </Switch>
-      </Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/rooms" component={Rooms} exact />
+        <Route path="/rooms/:slug" component={SingleRoom} exact />
+        <Route component={Error} />
+      </Switch>
     </>
   );
 };
 
-export default app;
+export default withRouter(App);

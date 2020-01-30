@@ -8,5 +8,5 @@ export const useRooms = () => {
 
 export const useRoom = slug => {
   const rooms = useRooms();
-  return rooms.getRoom(slug);
+  return { loading: rooms.loading, room: rooms.getRoom(slug) };
 };

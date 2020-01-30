@@ -11,26 +11,24 @@ const services = () => {
     {
       icon: <FaCocktail />,
       title: "free cocktails",
-      info:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, neque."
+      info: "Enjoy complementary drinks on the house, to top off your vacation!"
     },
     {
       icon: <FaHiking />,
       title: "endless hiking",
       info:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, neque."
+        "Choose through a plethora of guided tours throughout the local landscapes."
     },
     {
       icon: <FaShuttleVan />,
       title: "free shuttle",
       info:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, neque."
+        "Get anywhere you need to go with our local, free, shuttle. Quick and easy!"
     },
     {
       icon: <FaBeer />,
-      title: "strongest beer",
-      info:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, neque."
+      title: "local beer",
+      info: "We have connections to many local breweries. Taste the culture!"
     }
   ];
 

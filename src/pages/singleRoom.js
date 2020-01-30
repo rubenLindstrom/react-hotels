@@ -7,7 +7,11 @@ import { StyledHero, Banner } from "../components/atoms";
 
 const SingleRoom = props => {
   const slug = props.match.params.slug;
-  const room = useRoom(slug);
+  const { loading, room } = useRoom(slug);
+
+  if (loading) {
+    return "";
+  }
 
   if (!room) {
     return (
