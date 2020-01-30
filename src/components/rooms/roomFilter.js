@@ -70,7 +70,6 @@ const RoomFilter = ({ rooms }) => {
         {/* TODO: Update state only on blur, not every tick */}
         {/* room price */}
         <div className="form-group">
-          {/* TODO: Call it max-price? */}
           <label htmlFor="price">room price ${price}</label>
           <input
             type="range"

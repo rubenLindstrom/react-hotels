@@ -182,7 +182,7 @@ h6 {
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/room-banner-1.jpg");
   min-height: 60vh;
 }
 
@@ -356,6 +356,7 @@ h6 {
     width: 100%;
   }
 }
+
 /*end of services */
 /* featured rooms */
 

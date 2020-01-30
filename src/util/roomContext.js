@@ -40,12 +40,14 @@ const RoomProvider = ({ children }) => {
     }).then(res => {
       handleRoomData(res.items);
     });
+    // eslint-disable-next-line
   }, []);
 
   const handleRoomData = items => {
     const rooms = formatData(items);
     const featuredRooms = rooms.filter(room => room.featured);
 
+    const minPrice = Math.min(...rooms.map(item => item.price));
     const maxPrice = Math.max(...rooms.map(item => item.price));
     const maxSize = Math.max(...rooms.map(item => item.size));
 
@@ -60,6 +62,7 @@ const RoomProvider = ({ children }) => {
       ...prevState,
       price: maxPrice,
       maxPrice,
+      minPrice,
       maxSize
     }));
   };
@@ -78,13 +81,14 @@ const RoomProvider = ({ children }) => {
     return state.rooms.find(room => room.slug === slug);
   };
 
-  // On filter in view change - update state
+  // On filter change - update state
   const handleFilterChange = e => {
     const target = e.target;
-    let value = e.type === "checkbox" ? target.checked : target.value;
+    let value = target.type === "checkbox" ? target.checked : target.value;
+
     const name = target.name;
 
-    if (numFilters.includes(name)) value = parseInt(value);
+    if (value && numFilters.includes(name)) value = parseInt(value);
 
     setFilter(prevState => ({
       ...prevState,
@@ -104,7 +108,7 @@ const RoomProvider = ({ children }) => {
   const filterFunction = room => {
     let { type, capacity, price, minSize, maxSize, breakfast, pets } = filter;
 
-    if (type !== "all" && !room.type === type) return false;
+    if (type !== "all" && room.type !== type) return false;
     if (capacity !== 1 && room.capacity < capacity) return false;
     if (room.price > price) return false;
     if (room.size < minSize || room.size > maxSize) return false;

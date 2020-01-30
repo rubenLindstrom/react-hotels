@@ -15,7 +15,7 @@ const rooms = () => {
           </Link>
         </Banner>
       </Hero>
-      <RoomContainer></RoomContainer>
+      <RoomContainer />
     </>
   );
 };

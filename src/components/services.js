@@ -33,6 +33,7 @@ const services = () => {
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, neque."
     }
   ];
+
   return (
     <section className="services">
       <Title>services</Title>

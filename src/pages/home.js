@@ -9,11 +9,11 @@ import FeaturedRooms from "../components/featuredRooms";
 
 const slideshowSettings = {
   images: [
-    require("../images/home.jpg"),
-    require("../images/home3.jpg"),
-    require("../images/home1.jpeg")
+    require("../images/home1.jpeg"),
+    require("../images/home2.jpg"),
+    require("../images/home.jpg")
   ],
-  slideDuration: 6000
+  slideDuration: 5000
 };
 
 const home = () => {

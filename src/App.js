@@ -13,6 +13,19 @@ import SingleRoom from "./pages/singleRoom";
 // Components
 import Navbar from "./components/navbar";
 
+// TODO:
+/*
+  -Remove indoors image
+  -Optimize hero images
+  -Add another hero image
+  -Fix hover-effect on room card
+  -Fix room filters
+  -Add text when no rooms match?
+  -Change room banner image
+  -Add slider to rooms? Image navigation
+  -Add footer to rooms-pages
+*/
+
 const app = () => {
   return (
     <>

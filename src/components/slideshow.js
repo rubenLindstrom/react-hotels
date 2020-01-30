@@ -9,7 +9,8 @@ const Slideshow = ({ slideDuration, images, children }) => {
       setCurrentIndex(prevState => (prevState + 1) % images.length);
     }, slideDuration);
     return () => clearTimeout(timeout);
-  }, [currentIndex]);
+  }, [currentIndex, images.length, slideDuration]);
+
   return (
     <div className="slideshow">
       {images.map((img, index) => (
